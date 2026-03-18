@@ -5,38 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Influencer Blueprint</title>
   
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Custom animations */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(2.5rem);
-      transition: opacity 1s ease-out, transform 1s ease-out;
+    /* Pure CSS Animations - 100% reliable */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(2.5rem); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translateX(2.5rem); }
+      to { opacity: 1; transform: translateX(0); }
     }
-    .fade-left {
-      opacity: 0;
-      transform: translateX(2.5rem);
-      transition: opacity 1s ease-out, transform 1s ease-out;
-      transition-delay: 300ms;
+    
+    .animate-fade-up {
+      animation: fadeUp 1s ease-out forwards;
     }
-    .fade-left.visible {
-      opacity: 1;
-      transform: translateX(0);
+    
+    .animate-fade-left {
+      animation: fadeLeft 1s ease-out 0.3s forwards;
+      opacity: 0; /* Stays hidden until animation starts */
     }
   </style>
 </head>
 <body class="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden">
 
-  <!-- Navigation -->
   <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-2">
@@ -45,16 +40,14 @@
       </div>
       <button 
         onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
-        class="bg-white text-slate-950 hover:bg-orange-50 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+        class="bg-white text-slate-950 hover:bg-orange-50 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer"
       >
         Get It Now
       </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden relative">
-    <!-- Background glow and image -->
     <div class="absolute inset-0 z-0">
       <div class="absolute inset-0 bg-slate-950/90 z-10"></div>
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80" alt="Cyber background" class="w-full h-full object-cover opacity-30 mix-blend-screen" />
@@ -62,7 +55,7 @@
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-500/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
     
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
-      <div class="fade-up">
+      <div class="animate-fade-up">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-orange-400 text-sm font-medium mb-6">
           <span class="flex h-2 w-2 rounded-full bg-orange-400 animate-pulse"></span>
           Updated for 2026 AI Models
@@ -76,7 +69,7 @@
         <div class="flex flex-col sm:flex-row gap-4">
           <button 
             onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
-            class="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(249,115,22,0.4)]"
+            class="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(249,115,22,0.4)] cursor-pointer"
           >
             Download Now <i data-lucide="arrow-right" class="w-5 h-5"></i>
           </button>
@@ -109,9 +102,8 @@
         </div>
       </div>
 
-      <!-- Book Mockup Visual -->
-      <div class="fade-left relative lg:ml-auto">
-        <div class="relative w-full max-w-md mx-auto aspect-[3/4] perspective-1000">
+      <div class="animate-fade-left relative lg:ml-auto">
+        <div class="relative w-full max-w-md mx-auto aspect-[3/4] perspective-[1000px]">
           <div class="absolute inset-0 bg-gradient-to-tr from-orange-500 to-amber-600 rounded-2xl transform rotate-3 shadow-2xl opacity-50 blur-lg"></div>
           <div class="absolute inset-0 bg-slate-900 border border-slate-700 rounded-r-3xl rounded-l-md shadow-2xl overflow-hidden flex flex-col justify-between p-8 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
             <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/20 blur-2xl rounded-full"></div>
@@ -127,7 +119,6 @@
                 <p class="text-sm font-bold text-white">Dream Creations Verge</p>
               </div>
             </div>
-            <!-- Book Spine effect -->
             <div class="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-slate-950 to-slate-800/50"></div>
           </div>
         </div>
@@ -135,7 +126,6 @@
     </div>
   </section>
 
-  <!-- Social Proof Logos -->
   <section class="border-y border-slate-800 bg-slate-900/50 py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-center text-sm text-slate-500 font-semibold uppercase tracking-widest mb-6">Techniques featured in</p>
@@ -149,7 +139,6 @@
     </div>
   </section>
 
-  <!-- The Data Section -->
   <section class="py-24 bg-slate-950 px-4 sm:px-6 lg:px-8 relative">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
@@ -179,7 +168,6 @@
     </div>
   </section>
 
-  <!-- Avatar Showcase -->
   <section class="py-24 bg-slate-900 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -187,13 +175,12 @@
           <h2 class="text-3xl lg:text-4xl font-bold mb-4">Pixels That Pay.</h2>
           <p class="text-slate-400 text-lg max-w-xl">These aren't real people. They are digital assets generating 5-figure monthly incomes. Learn to create them in Chapter 2.</p>
         </div>
-        <button onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });" class="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors pb-2">
+        <button onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });" class="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors pb-2 cursor-pointer">
           Start building your avatar <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </button>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Avatar 1 -->
         <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
@@ -207,7 +194,6 @@
           </div>
         </div>
 
-        <!-- Avatar 2 -->
         <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
           <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
@@ -221,7 +207,6 @@
           </div>
         </div>
 
-        <!-- Avatar 3 -->
         <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
           <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
@@ -235,7 +220,6 @@
           </div>
         </div>
 
-        <!-- Avatar 4 -->
         <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
           <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
@@ -252,7 +236,6 @@
     </div>
   </section>
 
-  <!-- The 2026 Advantage Section -->
   <section class="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-950 border-t border-slate-800">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
       <div class="order-2 lg:order-1 relative">
@@ -296,7 +279,6 @@
     </div>
   </section>
 
-  <!-- Problem / Hook Section -->
   <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
     <h2 class="text-3xl lg:text-5xl font-bold mb-8">The creator economy is rigged.<br/><span class="text-slate-400">Until now.</span></h2>
     <p class="text-xl text-slate-300 mb-12 leading-relaxed">
@@ -304,7 +286,6 @@
     </p>
   </section>
 
-  <!-- The 3-Step System -->
   <section class="py-32 bg-slate-900 px-4 sm:px-6 lg:px-8 border-y border-slate-800">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-20">
@@ -313,7 +294,6 @@
       </div>
 
       <div class="space-y-24">
-        <!-- Step 1 -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div class="text-orange-500 font-mono font-bold text-xl mb-4">STEP 01</div>
@@ -332,7 +312,6 @@
           </div>
         </div>
 
-        <!-- Step 2 -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="order-2 md:order-1 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative">
             <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Video Editing and Motion" class="w-full h-auto" />
@@ -354,7 +333,6 @@
           </div>
         </div>
 
-        <!-- Step 3 -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div class="text-red-500 font-mono font-bold text-xl mb-4">STEP 03</div>
@@ -377,7 +355,7 @@
       <div class="mt-20 text-center">
         <button 
           onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
-          class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(249,115,22,0.3)]"
+          class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(249,115,22,0.3)] cursor-pointer"
         >
           Unlock the Full Blueprint <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </button>
@@ -385,7 +363,6 @@
     </div>
   </section>
 
-  <!-- What You'll Learn (Features) -->
   <section class="py-24 bg-slate-900 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -394,7 +371,6 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
           <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
             <i data-lucide="camera"></i>
@@ -402,7 +378,6 @@
           <h3 class="text-xl font-bold mb-3">Character Consistency</h3>
           <p class="text-slate-400 leading-relaxed">Master Midjourney & Stable Diffusion prompts to generate identical faces across different angles and outfits.</p>
         </div>
-        <!-- Feature 2 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
           <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
             <i data-lucide="zap"></i>
@@ -410,7 +385,6 @@
           <h3 class="text-xl font-bold mb-3">Hyper-Realistic Animation</h3>
           <p class="text-slate-400 leading-relaxed">Learn the secret tools to bring static images to life with lip-syncing, micro-expressions, and natural movement.</p>
         </div>
-        <!-- Feature 3 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
           <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
             <i data-lucide="users"></i>
@@ -418,7 +392,6 @@
           <h3 class="text-xl font-bold mb-3">Audience Growth Hacks</h3>
           <p class="text-slate-400 leading-relaxed">The exact TikTok and Instagram Reels strategies designed specifically for algorithmic success with AI content.</p>
         </div>
-        <!-- Feature 4 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
           <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
             <i data-lucide="book-open"></i>
@@ -426,7 +399,6 @@
           <h3 class="text-xl font-bold mb-3">Storytelling & Lore</h3>
           <p class="text-slate-400 leading-relaxed">Avatars need souls. Learn how to write compelling backstories that make human audiences fall in love.</p>
         </div>
-        <!-- Feature 5 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
           <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
             <i data-lucide="shield-check"></i>
@@ -434,7 +406,6 @@
           <h3 class="text-xl font-bold mb-3">Legal & Copyright</h3>
           <p class="text-slate-400 leading-relaxed">Navigate the complex gray area of AI copyright. Protect your intellectual property and avoid getting sued.</p>
         </div>
-        <!-- Feature 6 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
           <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
             <i data-lucide="cpu"></i>
@@ -446,7 +417,6 @@
     </div>
   </section>
 
-  <!-- Sneak Peek / Chapter List -->
   <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
     <h2 class="text-3xl font-bold mb-10 text-center">What's Inside the 150+ Pages?</h2>
     <div class="space-y-4">
@@ -478,13 +448,11 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="py-24 bg-slate-900/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center">They Built Their Avatars.<br/>Now They're Getting Paid.</h2>
       <div class="grid md:grid-cols-3 gap-8">
         
-        <!-- Testimonial 1 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 relative">
           <div class="absolute top-0 right-8 -translate-y-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
             Generating $4,200/mo
@@ -508,7 +476,6 @@
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 relative">
           <div class="absolute top-0 right-8 -translate-y-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
             Generating $8,500/mo
@@ -532,7 +499,6 @@
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
         <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 relative">
           <div class="absolute top-0 right-8 -translate-y-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
             Generating $12,000/mo
@@ -560,11 +526,9 @@
     </div>
   </section>
 
-  <!-- Meet the Author & FAQ -->
   <section class="py-32 bg-slate-950 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16">
       
-      <!-- Author Block -->
       <div class="lg:col-span-5">
         <h2 class="text-3xl font-bold mb-8">Meet the Architect</h2>
         <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
@@ -583,7 +547,6 @@
         </div>
       </div>
 
-      <!-- FAQ Block -->
       <div class="lg:col-span-7">
         <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
           <i data-lucide="help-circle" class="text-orange-400"></i> Frequently Asked Questions
@@ -614,7 +577,7 @@
         <div class="mt-10">
           <button 
             onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
-            class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1"
+            class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
           >
             I'm Ready to Start <i data-lucide="arrow-right" class="w-5 h-5"></i>
           </button>
@@ -624,9 +587,7 @@
     </div>
   </section>
 
-  <!-- Pricing Section -->
   <section id="pricing" class="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-t border-slate-800">
-     <!-- Background glow -->
      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 blur-[100px] rounded-full pointer-events-none"></div>
 
     <div class="max-w-3xl mx-auto">
@@ -635,11 +596,11 @@
           Limited Time Offer
         </div>
         <h2 class="text-4xl lg:text-5xl font-black mb-4">Start Your AI Empire Today</h2>
-        <p class="text-slate-400 mb-8">Instant lifetime access to the ebook, prompts, and bonus materials.</p>
-        
+        <p class="text-slate-400 mb-8">Instant access to the ebook, prompts, and bonus materials.</p>
+
         <div class="flex justify-center items-end gap-2 mb-8">
           <span class="text-3xl text-slate-500 line-through">$99</span>
-          <span class="text-6xl font-black text-white">$9</span>
+          <span class="text-6xl font-black text-white">$9.99</span>
           <span class="text-slate-400 mb-2">USD</span>
         </div>
 
@@ -662,7 +623,7 @@
           </div>
           <div class="flex items-center gap-3">
             <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 flex-shrink-0"></i>
-            <span class="text-slate-300">Lifetime Access & Free Updates</span>
+            <span class="text-slate-300">Access & Free Updates</span>
           </div>
         </div>
 
@@ -676,7 +637,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-slate-950 border-t border-slate-800 py-12 text-center text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
       <div class="flex items-center gap-2 mb-6 text-white opacity-80">
@@ -693,7 +653,6 @@
         This site is not a part of the Facebook, TikTok, or Instagram website or their respective companies.
       </p>
 
-      <!-- Legal and Disclaimers -->
       <div class="mt-12 pt-12 border-t border-slate-800/50 text-xs text-slate-600 text-left w-full space-y-4 leading-relaxed max-w-5xl">
         <p>
           <strong>Income Disclaimer:</strong><br/>
@@ -728,42 +687,9 @@
     </div>
   </footer>
 
-  <!-- Simple Checkout Modal -->
-  <div id="checkout-modal" class="hidden fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl">
-      <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-        <i data-lucide="shield-check" class="text-orange-400 w-8 h-8"></i>
-      </div>
-      <h3 class="text-2xl font-bold mb-2">Secure Checkout</h3>
-      <p class="text-slate-400 mb-6">You will now be redirected to our secure payment gateway to complete your purchase of $9.</p>
-      <div class="flex gap-4">
-        <button onclick="document.getElementById('checkout-modal').classList.add('hidden')" class="flex-1 px-4 py-2 rounded-xl bg-slate-800 text-white font-semibold hover:bg-slate-700 transition-colors">
-          Cancel
-        </button>
-        <button onclick="document.getElementById('checkout-modal').classList.add('hidden')" class="flex-1 px-4 py-2 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-colors">
-          Proceed
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Initialize animations, year, and icons -->
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
-
-    // Trigger entrance animations
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.fade-up, .fade-left').forEach(el => {
-        // slight delay to ensure smooth loading
-        setTimeout(() => el.classList.add('visible'), 100);
-      });
-      
-      // Update copyright year
-      document.getElementById('footer-year').innerHTML = 
-        `© ${new Date().getFullYear()} AIFluence Blueprint. All rights reserved. <br/>` +
-        `This site is not a part of the Facebook, TikTok, or Instagram website or their respective companies.`;
-    });
   </script>
 </body>
 </html>
