@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Influencer Blueprint</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(2.5rem);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-left {
+      opacity: 0;
+      transform: translateX(2.5rem);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      transition-delay: 300ms;
+    }
+    .fade-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-orange-500 selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="cpu" class="text-orange-400 w-8 h-8"></i>
+        <span class="font-bold text-xl tracking-tight">AI<span class="text-orange-400">Fluence</span></span>
+      </div>
+      <button 
+        onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
+        class="bg-white text-slate-950 hover:bg-orange-50 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+      >
+        Get It Now
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden relative">
+    <!-- Background glow and image -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-slate-950/90 z-10"></div>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80" alt="Cyber background" class="w-full h-full object-cover opacity-30 mix-blend-screen" />
+    </div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-500/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
+    
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+      <div class="fade-up">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-orange-400 text-sm font-medium mb-6">
+          <span class="flex h-2 w-2 rounded-full bg-orange-400 animate-pulse"></span>
+          Updated for 2026 AI Models
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+          Build an Empire with <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Pixels, Not People.</span>
+        </h1>
+        <p class="text-lg lg:text-xl text-slate-400 mb-8 leading-relaxed max-w-2xl">
+          The ultimate blueprint to creating, growing, and monetizing hyper-realistic AI influencers. Stop watching from the sidelines and claim your share of the $21B creator economy.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button 
+            onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
+            class="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(249,115,22,0.4)]"
+          >
+            Download Now <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-4 px-4 py-2">
+            <div class="flex -space-x-3">
+              <div class="w-10 h-10 rounded-full border-2 border-slate-950 bg-slate-800 flex items-center justify-center overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-10 h-10 rounded-full border-2 border-slate-950 bg-slate-800 flex items-center justify-center overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-10 h-10 rounded-full border-2 border-slate-950 bg-slate-800 flex items-center justify-center overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-10 h-10 rounded-full border-2 border-slate-950 bg-slate-800 flex items-center justify-center overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="text-sm">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <span class="text-slate-400">Trusted by 2,400+ creators</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book Mockup Visual -->
+      <div class="fade-left relative lg:ml-auto">
+        <div class="relative w-full max-w-md mx-auto aspect-[3/4] perspective-1000">
+          <div class="absolute inset-0 bg-gradient-to-tr from-orange-500 to-amber-600 rounded-2xl transform rotate-3 shadow-2xl opacity-50 blur-lg"></div>
+          <div class="absolute inset-0 bg-slate-900 border border-slate-700 rounded-r-3xl rounded-l-md shadow-2xl overflow-hidden flex flex-col justify-between p-8 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/20 blur-2xl rounded-full"></div>
+            <div class="relative z-10">
+              <h3 class="text-orange-400 font-bold tracking-widest text-sm mb-4 uppercase">The Ultimate Guide</h3>
+              <h2 class="text-4xl font-black text-white leading-none mb-4">THE AI<br/>INFLUENCER<br/>BLUEPRINT</h2>
+              <p class="text-slate-400 text-sm">From Zero to Viral Virtual Avatar</p>
+            </div>
+            <div class="relative z-10 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-orange-500"></div>
+              <div>
+                <p class="text-xs text-slate-400 uppercase tracking-wider">Author</p>
+                <p class="text-sm font-bold text-white">Dream Creations Verge</p>
+              </div>
+            </div>
+            <!-- Book Spine effect -->
+            <div class="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-slate-950 to-slate-800/50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Logos -->
+  <section class="border-y border-slate-800 bg-slate-900/50 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm text-slate-500 font-semibold uppercase tracking-widest mb-6">Techniques featured in</p>
+      <div class="flex flex-wrap justify-center gap-10 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+        <span class="text-xl md:text-2xl font-black tracking-tighter text-slate-300">TechCrunch</span>
+        <span class="text-xl md:text-2xl font-black tracking-tighter text-slate-300">WIRED</span>
+        <span class="text-xl md:text-2xl font-black tracking-tighter text-slate-300">Forbes</span>
+        <span class="text-xl md:text-2xl font-black tracking-tighter text-slate-300">The Verge</span>
+        <span class="text-xl md:text-2xl font-black tracking-tighter text-slate-300">Mashable</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Data Section -->
+  <section class="py-24 bg-slate-950 px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">The Data Doesn't Lie</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Why brands are moving billions of dollars from human creators to virtual avatars.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors">
+          <i data-lucide="trending-up" class="w-10 h-10 text-orange-400 mb-6"></i>
+          <div class="text-5xl font-black text-white mb-2">3.2x</div>
+          <h3 class="text-xl font-bold mb-2">Higher Engagement</h3>
+          <p class="text-slate-400">Virtual influencers generate nearly three times the engagement rates of real humans, driving massive ROI for sponsors.</p>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-colors">
+          <i data-lucide="bar-chart-3" class="w-10 h-10 text-amber-400 mb-6"></i>
+          <div class="text-5xl font-black text-white mb-2">$21.1B</div>
+          <h3 class="text-xl font-bold mb-2">Market Size</h3>
+          <p class="text-slate-400">The creator economy is exploding. Brands are actively seeking novel, brand-safe digital assets to represent them.</p>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-red-500/50 transition-colors">
+          <i data-lucide="shield-check" class="w-10 h-10 text-red-400 mb-6"></i>
+          <div class="text-5xl font-black text-white mb-2">100%</div>
+          <h3 class="text-xl font-bold mb-2">Brand Safe</h3>
+          <p class="text-slate-400">Digital avatars don't get canceled, they don't age, and they don't demand reshoots. They are the perfect marketing vehicle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avatar Showcase -->
+  <section class="py-24 bg-slate-900 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4">Pixels That Pay.</h2>
+          <p class="text-slate-400 text-lg max-w-xl">These aren't real people. They are digital assets generating 5-figure monthly incomes. Learn to create them in Chapter 2.</p>
+        </div>
+        <button onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });" class="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors pb-2">
+          Start building your avatar <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Avatar 1 -->
+        <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-bold rounded-full mb-2 backdrop-blur-sm border border-orange-500/30">
+              Fashion & Beauty
+            </span>
+            <div class="text-lg font-bold text-white flex items-center gap-2">
+              @aella.style <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avatar 2 -->
+        <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-bold rounded-full mb-2 backdrop-blur-sm border border-orange-500/30">
+              Tech & Lifestyle
+            </span>
+            <div class="text-lg font-bold text-white flex items-center gap-2">
+              @jace_digital <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avatar 3 -->
+        <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-bold rounded-full mb-2 backdrop-blur-sm border border-orange-500/30">
+              Streetwear
+            </span>
+            <div class="text-lg font-bold text-white flex items-center gap-2">
+              @nova.wears <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avatar 4 -->
+        <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800 border border-slate-700">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="AI Avatar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-bold rounded-full mb-2 backdrop-blur-sm border border-orange-500/30">
+              Fitness
+            </span>
+            <div class="text-lg font-bold text-white flex items-center gap-2">
+              @kade.fit <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 2026 Advantage Section -->
+  <section class="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-950 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1 relative">
+         <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-400 blur-3xl opacity-20 rounded-full"></div>
+         <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80" alt="AI Technology Evolution" class="relative z-10 rounded-2xl border border-slate-700 shadow-2xl" />
+         <div class="absolute -bottom-6 -right-6 bg-slate-900 border border-slate-700 p-6 rounded-2xl shadow-xl z-20">
+           <div class="flex items-center gap-4">
+             <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
+               <i data-lucide="lightbulb" class="text-orange-400 w-6 h-6"></i>
+             </div>
+             <div>
+               <div class="text-2xl font-black text-white">100%</div>
+               <div class="text-sm text-slate-400">Uncanny Valley Eliminated</div>
+             </div>
+           </div>
+         </div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <h2 class="text-3xl lg:text-5xl font-bold mb-6 leading-tight">Why 2026 is the <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Ultimate Window.</span></h2>
+        <p class="text-xl text-slate-300 mb-6 leading-relaxed">
+          Two years ago, AI influencers looked robotic. Their eyes were lifeless, their voices sounded like automated phone menus, and the "uncanny valley" drove audiences away. 
+        </p>
+        <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+          That era is dead. With the release of the latest diffusion models and emotional voice-cloning algorithms, it is now mathematically impossible for the average user scrolling TikTok to tell the difference between a real human and a well-prompted AI. The barrier to entry has vanished, but the mass public hasn't realized it yet.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle-2" class="w-6 h-6 text-orange-400 flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-300 text-lg">Zero expensive computing power required (all cloud-based).</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle-2" class="w-6 h-6 text-orange-400 flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-300 text-lg">Instant, emotional lip-syncing from a single static image.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle-2" class="w-6 h-6 text-orange-400 flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-300 text-lg">Automated character consistency across 100+ environments.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / Hook Section -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl lg:text-5xl font-bold mb-8">The creator economy is rigged.<br/><span class="text-slate-400">Until now.</span></h2>
+    <p class="text-xl text-slate-300 mb-12 leading-relaxed">
+      Human influencers deal with burnout, scandals, aging, and physical limitations. Virtual influencers don't sleep. They don't complain. They scale infinitely. Brands are paying millions to sponsor AI avatars. Are you going to watch, or are you going to build your own?
+    </p>
+  </section>
+
+  <!-- The 3-Step System -->
+  <section class="py-32 bg-slate-900 px-4 sm:px-6 lg:px-8 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6">The Exact Playbook: From Prompt to Profit</h2>
+        <p class="text-xl text-slate-400 max-w-3xl mx-auto">We've distilled the entire process down to a repeatable, 3-step pipeline. Once you set this up, your avatar becomes an automated content engine.</p>
+      </div>
+
+      <div class="space-y-24">
+        <!-- Step 1 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="text-orange-500 font-mono font-bold text-xl mb-4">STEP 01</div>
+            <h3 class="text-3xl font-bold mb-4">Character Conception & Generation</h3>
+            <p class="text-lg text-slate-400 leading-relaxed mb-6">
+              You don't need to be an artist. Using our proprietary "Seed Lock" prompting method, you will learn how to generate a hyper-realistic base character and lock their facial structure. This allows you to put them in Paris today, and Tokyo tomorrow, without their face changing.
+            </p>
+            <div class="flex items-center gap-4 text-sm font-semibold text-slate-300">
+              <span class="flex items-center gap-1 bg-slate-800 px-3 py-1.5 rounded-md"><i data-lucide="camera" class="w-4 h-4 text-orange-400"></i> Midjourney Mastery</span>
+              <span class="flex items-center gap-1 bg-slate-800 px-3 py-1.5 rounded-md"><i data-lucide="users" class="w-4 h-4 text-orange-400"></i> Niche Selection</span>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="AI Generation Grid" class="w-full h-auto" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Video Editing and Motion" class="w-full h-auto" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i data-lucide="play-circle" class="w-20 h-20 text-white/50"></i>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="text-amber-500 font-mono font-bold text-xl mb-4">STEP 02</div>
+            <h3 class="text-3xl font-bold mb-4">Voice Cloning & Kinetic Motion</h3>
+            <p class="text-lg text-slate-400 leading-relaxed mb-6">
+              Static images are dead. We show you exactly how to feed your generated avatar into an AI video engine, clone a unique voice, and instantly generate lip-synced video content. Create 30 days of highly engaging TikToks in a single 2-hour session.
+            </p>
+            <div class="flex items-center gap-4 text-sm font-semibold text-slate-300">
+              <span class="flex items-center gap-1 bg-slate-800 px-3 py-1.5 rounded-md"><i data-lucide="zap" class="w-4 h-4 text-amber-400"></i> Emotional Speech</span>
+              <span class="flex items-center gap-1 bg-slate-800 px-3 py-1.5 rounded-md"><i data-lucide="video" class="w-4 h-4 text-amber-400"></i> Video Synthesis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="text-red-500 font-mono font-bold text-xl mb-4">STEP 03</div>
+            <h3 class="text-3xl font-bold mb-4">Monetization & Brand Deals</h3>
+            <p class="text-lg text-slate-400 leading-relaxed mb-6">
+              Likes don't pay the rent. The blueprint includes our exact copy-paste email templates used to pitch brands. We teach you how to price your virtual integrations, handle contracts, and secure monthly retainers without ever showing your real face on camera.
+            </p>
+            <div class="flex items-center gap-4 text-sm font-semibold text-slate-300">
+              <span class="flex items-center gap-1 bg-slate-800 px-3 py-1.5 rounded-md"><i data-lucide="globe" class="w-4 h-4 text-red-400"></i> Brand Outreach</span>
+              <span class="flex items-center gap-1 bg-slate-800 px-3 py-1.5 rounded-md"><i data-lucide="trending-up" class="w-4 h-4 text-red-400"></i> Scaling Revenue</span>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Analytics and Revenue" class="w-full h-auto" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 text-center">
+        <button 
+          onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
+          class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(249,115,22,0.3)]"
+        >
+          Unlock the Full Blueprint <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Learn (Features) -->
+  <section class="py-24 bg-slate-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Inside The Blueprint</h2>
+        <p class="text-slate-400 text-lg">Everything you need to generate, animate, and monetize your digital star.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="camera"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Character Consistency</h3>
+          <p class="text-slate-400 leading-relaxed">Master Midjourney & Stable Diffusion prompts to generate identical faces across different angles and outfits.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="zap"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Hyper-Realistic Animation</h3>
+          <p class="text-slate-400 leading-relaxed">Learn the secret tools to bring static images to life with lip-syncing, micro-expressions, and natural movement.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="users"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Audience Growth Hacks</h3>
+          <p class="text-slate-400 leading-relaxed">The exact TikTok and Instagram Reels strategies designed specifically for algorithmic success with AI content.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="book-open"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Storytelling & Lore</h3>
+          <p class="text-slate-400 leading-relaxed">Avatars need souls. Learn how to write compelling backstories that make human audiences fall in love.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Legal & Copyright</h3>
+          <p class="text-slate-400 leading-relaxed">Navigate the complex gray area of AI copyright. Protect your intellectual property and avoid getting sued.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-orange-500/50 transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="cpu"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Monetization & Outreach</h3>
+          <p class="text-slate-400 leading-relaxed">Templates for pitching brands, setting your rates, and locking in 5-figure sponsorship deals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sneak Peek / Chapter List -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center">What's Inside the 150+ Pages?</h2>
+    <div class="space-y-4">
+      <div class="flex items-center p-4 bg-slate-900 rounded-xl border border-slate-800">
+        <div class="text-orange-500 font-mono font-bold text-xl mr-6">01</div>
+        <div class="flex-1 font-semibold text-lg">The Anatomy of a Viral Avatar</div>
+        <div class="hidden sm:block text-slate-500 text-sm">15 min read</div>
+      </div>
+      <div class="flex items-center p-4 bg-slate-900 rounded-xl border border-slate-800">
+        <div class="text-orange-500 font-mono font-bold text-xl mr-6">02</div>
+        <div class="flex-1 font-semibold text-lg">Prompt Engineering for Absolute Consistency</div>
+        <div class="hidden sm:block text-slate-500 text-sm">30 min read</div>
+      </div>
+      <div class="flex items-center p-4 bg-slate-900 rounded-xl border border-slate-800">
+        <div class="text-orange-500 font-mono font-bold text-xl mr-6">03</div>
+        <div class="flex-1 font-semibold text-lg">Voice Cloning & Personality Design</div>
+        <div class="hidden sm:block text-slate-500 text-sm">25 min read</div>
+      </div>
+      <div class="flex items-center p-4 bg-slate-900 rounded-xl border border-slate-800">
+        <div class="text-orange-500 font-mono font-bold text-xl mr-6">04</div>
+        <div class="flex-1 font-semibold text-lg">The Content Engine: Automating 30 Posts a Day</div>
+        <div class="hidden sm:block text-slate-500 text-sm">40 min read</div>
+      </div>
+      <div class="flex items-center p-4 bg-slate-900 rounded-xl border border-slate-800">
+        <div class="text-orange-500 font-mono font-bold text-xl mr-6">05</div>
+        <div class="flex-1 font-semibold text-lg">Securing Brand Deals Without a Human Face</div>
+        <div class="hidden sm:block text-slate-500 text-sm">20 min read</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center">They Built Their Avatars.<br/>Now They're Getting Paid.</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 relative">
+          <div class="absolute top-0 right-8 -translate-y-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            Generating $4,200/mo
+          </div>
+          <div class="flex text-yellow-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-300 italic mb-6">"I struggled for years to grow my personal brand. I pivoted to an AI travel influencer using this guide, and hit 100k followers on TikTok in 3 weeks. Unbelievable."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-800">
+               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-full h-full rounded-full object-cover" />
+            </div>
+            <div>
+              <div class="font-bold">Sarah J.</div>
+              <div class="text-slate-500 text-sm">@sarahcreates</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 relative">
+          <div class="absolute top-0 right-8 -translate-y-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            Generating $8,500/mo
+          </div>
+          <div class="flex text-yellow-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-300 italic mb-6">"The section on character consistency is worth the price alone. I finally understand how to put my avatar in different environments without her face changing."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-800">
+               <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-full h-full rounded-full object-cover" />
+            </div>
+            <div>
+              <div class="font-bold">Marcus T.</div>
+              <div class="text-slate-500 text-sm">@marcus_ai</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 relative">
+          <div class="absolute top-0 right-8 -translate-y-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            Generating $12,000/mo
+          </div>
+          <div class="flex text-yellow-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-300 italic mb-6">"I just signed my first brand deal with a major fashion retailer. They don't care that she's AI; they care about the engagement. Best investment ever."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-800">
+               <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=100&h=100&q=80" alt="User" class="w-full h-full rounded-full object-cover" />
+            </div>
+            <div>
+              <div class="font-bold">Elena R.</div>
+              <div class="text-slate-500 text-sm">@elena_digital</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Author & FAQ -->
+  <section class="py-32 bg-slate-950 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16">
+      
+      <!-- Author Block -->
+      <div class="lg:col-span-5">
+        <h2 class="text-3xl font-bold mb-8">Meet the Architect</h2>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80" alt="Dream Creations Verge Setup" class="w-full h-64 object-cover opacity-80" />
+          <div class="p-8">
+            <div class="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-bold rounded-full mb-4 uppercase tracking-wider">
+              Dream Creations Verge
+            </div>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+              "For years, we struggled with traditional content creation. The lighting, the editing, the sheer exhaustion of trying to be 'on' all the time. When generative AI hit the tipping point, we realized we didn't need to be the talent—we could engineer the talent."
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Dream Creations Verge now manages a secret portfolio of virtual influencers generating millions of monthly impressions. This blueprint is the exact, unredacted system we use internally.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Block -->
+      <div class="lg:col-span-7">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i data-lucide="help-circle" class="text-orange-400"></i> Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-orange-500/30 transition-colors">
+            <h4 class="text-lg font-bold text-white mb-2">Do I need a powerful, expensive computer to do this?</h4>
+            <p class="text-slate-400 leading-relaxed">Absolutely not. 100% of the tools we use in this blueprint run in the cloud via your web browser. If you can open Google Chrome, you can build an AI influencer.</p>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-orange-500/30 transition-colors">
+            <h4 class="text-lg font-bold text-white mb-2">Is this legal? Will I get sued for copyright infringement?</h4>
+            <p class="text-slate-400 leading-relaxed">We dedicate an entire chapter to legal safety. You will learn how to generate completely unique, non-existent faces so you aren't infringing on real people. We also cover FTC disclosure rules for brand deals.</p>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-orange-500/30 transition-colors">
+            <h4 class="text-lg font-bold text-white mb-2">I have zero technical skills. Is this too advanced for me?</h4>
+            <p class="text-slate-400 leading-relaxed">This guide is built for beginners. There is zero coding involved. We provide copy-and-paste prompt templates. If you can type text into a box, you can follow this blueprint.</p>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-orange-500/30 transition-colors">
+            <h4 class="text-lg font-bold text-white mb-2">How long does it take to start making money?</h4>
+            <p class="text-slate-400 leading-relaxed">Building an audience takes time, whether you are human or AI. However, because you can generate 30 pieces of high-quality content in an afternoon, AI creators typically scale 3x to 5x faster than human creators. Most students pitch their first brand deal within 60 days.</p>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-orange-500/30 transition-colors">
+            <h4 class="text-lg font-bold text-white mb-2">Do I have to buy expensive software after getting this book?</h4>
+            <p class="text-slate-400 leading-relaxed">No. We specifically designed this workflow to utilize free-tier or extremely low-cost ($10-$20/mo) AI subscriptions. We show you the exact lean tech stack to keep your overhead near zero.</p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <button 
+            onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });"
+            class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1"
+          >
+            I'm Ready to Start <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden border-t border-slate-800">
+     <!-- Background glow -->
+     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-gradient-to-b from-slate-900 to-slate-950 rounded-3xl border border-slate-700 p-8 lg:p-12 shadow-2xl relative z-10 text-center">
+        <div class="inline-block bg-orange-500/10 text-orange-400 font-bold px-4 py-2 rounded-full mb-6 text-sm">
+          Limited Time Offer
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-black mb-4">Start Your AI Empire Today</h2>
+        <p class="text-slate-400 mb-8">Instant lifetime access to the ebook, prompts, and bonus materials.</p>
+        
+        <div class="flex justify-center items-end gap-2 mb-8">
+          <span class="text-3xl text-slate-500 line-through">$99</span>
+          <span class="text-6xl font-black text-white">$9</span>
+          <span class="text-slate-400 mb-2">USD</span>
+        </div>
+
+        <div class="space-y-4 max-w-sm mx-auto mb-10 text-left">
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 flex-shrink-0"></i>
+            <span class="text-slate-300">150+ Page Comprehensive PDF Guide</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 flex-shrink-0"></i>
+            <span class="text-slate-300">50+ Copy-Paste Midjourney Prompts</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 flex-shrink-0"></i>
+            <span class="text-slate-300">Brand Pitch Email Templates</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 flex-shrink-0"></i>
+            <span class="text-slate-300">List of Top AI Video Tools</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-orange-400 flex-shrink-0"></i>
+            <span class="text-slate-300">Lifetime Access & Free Updates</span>
+          </div>
+        </div>
+
+        <button 
+          onclick="document.getElementById('checkout-modal').classList.remove('hidden')"
+          class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-[0_0_40px_rgba(249,115,22,0.4)] mx-auto"
+        >
+          <i data-lucide="download" class="w-6 h-6"></i> Get Instant Access
+        </button>
+        <p class="mt-6 text-slate-500 text-sm flex items-center justify-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4"></i> 30-Day Money-Back Guarantee
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-12 text-center text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+      <div class="flex items-center gap-2 mb-6 text-white opacity-80">
+        <i data-lucide="cpu" class="text-orange-400 w-6 h-6"></i>
+        <span class="font-bold text-lg tracking-tight">AI<span class="text-orange-400">Fluence</span></span>
+      </div>
+      <div class="flex gap-6 mb-8 text-sm">
+        <a href="#" class="hover:text-orange-400 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-orange-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-orange-400 transition-colors">Contact Support</a>
+      </div>
+      <p class="text-sm" id="footer-year">
+        © 2026 AIFluence Blueprint. All rights reserved. <br/>
+        This site is not a part of the Facebook, TikTok, or Instagram website or their respective companies.
+      </p>
+
+      <!-- Legal and Disclaimers -->
+      <div class="mt-12 pt-12 border-t border-slate-800/50 text-xs text-slate-600 text-left w-full space-y-4 leading-relaxed max-w-5xl">
+        <p>
+          <strong>Income Disclaimer:</strong><br/>
+          This website and the items it distributes contain business strategies, marketing methods and other business advice that, regardless of my/our own results and experience, may not produce the same results (or any results) for you. Maching Gun Method (and its creators) make absolutely no guarantee, expressed or implied, that by following the advice or content available from this web site you will make any money or improve current profits, as there are many factors and variables beyond our control which may impact any given business. Primarily, results will depend on the nature of the product or business model, the conditions of the marketplace, the experience of the individual, and situations and elements that are beyond your control. As with any business endeavour, you assume all risk related to investment based on your own discretion.
+        </p>
+        <p>
+          <strong>Liability Disclaimer:</strong><br/>
+          By reading this website or the documents it offers, you assume all risks associated with using the advice given, with a full understanding that you, solely, are responsible for anything that may occur as a result of putting this information into action in any way, and regardless of your interpretation of the advice. You further agree that our company cannot be held responsible in any way for the success or failure of your business as a result of the information provided by our company. It is your responsibility to conduct your own due diligence regarding the safe and successful operation of your business if you intend to apply any of our information in any way to your business operations. In summary, you understand that we make absolutely no guarantees regarding income as a result of applying this information, as well as the fact that you are solely responsible for the results of any action taken on your part as a result of any given information. In addition, for all intents and purposes you agree that our content is to be considered "for entertainment purposes only". Always seek the advice of a professional when making financial, tax or business decisions.
+        </p>
+        <p>
+          <strong>Guarantee Terms:</strong><br/>
+          If this does not work as stated we will return your payment — Refunds are always honored so there is no risk.
+        </p>
+        <p>
+          <strong>*Please Note:</strong><br/>
+          Testimonials and examples used are exceptional results, and don't apply to the average purchaser and are not intended to represent or guarantee that anyone will achieve the same or similar results. Each individual's success depends on his or her background, dedication, desire and motivation. As with any business endeavour, there is no guarantee that you will earn any money. This product is not affiliated with or endorsed by YouTube.
+        </p>
+        <p>
+          <strong>Support:</strong><br/>
+          For any questions before or after the sale email dave@daveespino.com
+        </p>
+        <p>
+          <strong>Privacy policy:</strong><br/>
+          Our privacy policy is simple: we will never share or sell your personal information to any third parties. Your email address and other personal information will only be used to communicate with you about your purchase and to provide updates on the product. We take your privacy seriously and will do everything in our power to protect it.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple Checkout Modal -->
+  <div id="checkout-modal" class="hidden fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl">
+      <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="shield-check" class="text-orange-400 w-8 h-8"></i>
+      </div>
+      <h3 class="text-2xl font-bold mb-2">Secure Checkout</h3>
+      <p class="text-slate-400 mb-6">You will now be redirected to our secure payment gateway to complete your purchase of $9.</p>
+      <div class="flex gap-4">
+        <button onclick="document.getElementById('checkout-modal').classList.add('hidden')" class="flex-1 px-4 py-2 rounded-xl bg-slate-800 text-white font-semibold hover:bg-slate-700 transition-colors">
+          Cancel
+        </button>
+        <button onclick="document.getElementById('checkout-modal').classList.add('hidden')" class="flex-1 px-4 py-2 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-colors">
+          Proceed
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Initialize animations, year, and icons -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Trigger entrance animations
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.fade-up, .fade-left').forEach(el => {
+        // slight delay to ensure smooth loading
+        setTimeout(() => el.classList.add('visible'), 100);
+      });
+      
+      // Update copyright year
+      document.getElementById('footer-year').innerHTML = 
+        `© ${new Date().getFullYear()} AIFluence Blueprint. All rights reserved. <br/>` +
+        `This site is not a part of the Facebook, TikTok, or Instagram website or their respective companies.`;
+    });
+  </script>
+</body>
+</html>
